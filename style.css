@@ -1,0 +1,129 @@
+body{
+    background-color: bisque;
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+   
+}
+#time{
+    display: flex;
+   width: 100%;
+
+   align-items: center;
+   justify-content: center;
+    background-color: azure;
+    position: relative;
+ z-index: 1;
+font-family: 'Times New Roman', Times, serif ;
+font-size: 10rem;
+background-color: bisque;
+
+}
+#buttons{
+    display: flex;
+   width: 100%;
+
+
+   justify-content: center;
+
+    background-color: azure;
+    position: relative;
+    z-index: 1;
+    box-sizing: 2rem;
+    background-color: bisque;
+
+
+
+}
+
+#start{
+    background-color: green;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: larger;
+    position: relative;
+z-index: 10;
+border-radius: 1rem;
+}
+#start:hover{
+    box-shadow: 2rem silver;
+
+}
+
+#stop{
+    background-color: red;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: larger;
+    position: relative;
+    border-radius: 1rem;
+z-index: 10;
+}
+
+#stop :hover{
+    box-shadow: 2rem silver;
+}
+span{  
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(78, 56, 131);
+    margin: 0;
+    padding: 0;
+}
+img{
+    margin: 0;
+    padding: 0;
+height: 4rem;
+width: 4rem;
+}
+#reset{
+    background-color: yellow;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: larger;
+    border-radius: 1rem;
+    position: relative;
+z-index: 10;
+}
+#reset:hover{
+    box-shadow: 2rem silver;
+
+}
+#lap{
+     background-color: rgb(23, 207, 253);
+    margin: 1rem;
+    padding: 1rem;
+    font-size: larger;
+    border-radius: 1rem;
+    position: relative;
+z-index: 10;
+    
+}
+#laps{
+    font-size: 2rem;
+}
+#lap_reset{
+    background-color: rgb(76, 255, 22);
+    margin: 1rem;
+    padding: 1rem;
+    font-size: larger;
+    position: relative;
+z-index: 10;border-radius: 1rem;
+display: none;
+}
+.btn :hover{
+    box-shadow: 2rem;
+}
+ol li{
+    padding-left: 14px;
+    margin-left: 0rem;
+     
+}
+ol{
+
+    border-style: solid;
+
+}
