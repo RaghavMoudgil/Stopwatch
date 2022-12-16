@@ -66,57 +66,57 @@
     var start_btn = document.getElementById('start');
     var stop_btn = document.getElementById('stop');
     var reset_btn = document.getElementById('reset');
-   var count = 0;
-   function counter() {
-    count++
+    var count = 0;
+    function counter() {
+        count++
 
-    return count
-   }
-        start_btn.addEventListener('click',() => {    
-            start();
-            counter();
-            if (count >= 1 ){
-                start_btn.disabled = true;
-              
-            }   
-             
-       })
-  
-        stop_btn.addEventListener('click', ()=> {
-            stop();
-            if (start_btn.disabled == true) {
-                start_btn.disabled =false;
-            }
-        });
-        reset_btn.addEventListener('click', ()=> {
-            reset();
-            if (start_btn.disabled == true) {
-                start_btn.disabled =false;
-            }
-        });
-        lap_Btn.addEventListener('click', ()=> {
-            lap();
-            if (start_btn.disabled == true) {
-                start_btn.disabled =false;
-            }
-        });
-        lap_Btn.addEventListener('click', ()=> {
-            show_btn();
-            if (start_btn.disabled == true) {
-                start_btn.disabled =false;
-            }
-        });
-        lap_reset.addEventListener('click', ()=> {
-            reset();
-            if (start_btn.disabled == true) {
-                start_btn.disabled =false;
-            }
-        });
-    
+        return count
+    }
+    start_btn.addEventListener('click', () => {
+        start();
+        counter();
+        if (count >= 1) {
+            start_btn.disabled = true;
+
+        }
+
+    })
+
+    stop_btn.addEventListener('click', () => {
+        stop();
+        if (start_btn.disabled == true) {
+            start_btn.disabled = false;
+        }
+    });
+    reset_btn.addEventListener('click', () => {
+        reset();
+        if (start_btn.disabled == true) {
+            start_btn.disabled = false;
+        }
+    });
+    lap_Btn.addEventListener('click', () => {
+        lap();
+        if (start_btn.disabled == true) {
+            start_btn.disabled = false;
+        }
+    });
+    lap_Btn.addEventListener('click', () => {
+        show_btn();
+        if (start_btn.disabled == true) {
+            start_btn.disabled = false;
+        }
+    });
+    lap_reset.addEventListener('click', () => {
+        reset();
+        if (start_btn.disabled == true) {
+            start_btn.disabled = false;
+        }
+    });
+
     function lap() {
-        
+
         lapNow = `<div class="lap"><li>${displayhr} : ${displaymin} : ${displaysec}</li></div>`;
-        
+
         lap_Record.innerHTML += lapNow;
     }
     function reset() {
