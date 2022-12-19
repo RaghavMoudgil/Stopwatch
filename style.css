@@ -62,12 +62,7 @@ span {
     padding: 0;
 }
 
-img {
-    margin: 0;
-    padding: 0;
-    height: 4rem;
-    width: 4rem;
-}
+
 
 #reset {
     background-color: yellow;
@@ -126,7 +121,7 @@ h1 {
 .logo {
     margin-left: 10.5rem;
     position: absolute;
-    animation: myanim 10s;
+    animation: myanim 5s;
     animation-iteration-count: infinite;
 
 }
