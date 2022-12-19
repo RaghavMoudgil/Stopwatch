@@ -28,12 +28,12 @@
         if (rset == 'true') {
             sec++;
             if (sec / 60 == 1) {
-                sec = 0;
+                sec = 00;
                 min++;
             }
             if (min / 60 == 1) {
-                min = 0;
-                sec = 0;
+                min = 00;
+                sec = 00;
                 hr++;
             }
             if (sec < 10) {
@@ -60,7 +60,7 @@
         reset_time = setTimeout(stopwatch, 1000);
 
     }
-    var lap_Btn = document.getElementById('lap').style.display = "none";
+    var lap_Btn = document.getElementById('lap')
     var lap_reset = document.getElementById('lap_reset');
     var lap_Record = document.getElementById('lap_record');
     var start_btn = document.getElementById('start');
@@ -72,12 +72,17 @@
 
         return count
     }
+    lap_Btn.style.visibility='hidden';
+    stop_btn.style.visibility='hidden'
     start_btn.addEventListener('click', () => {
         start();
         counter();
         if (count >= 1) {
             start_btn.disabled = true;
-
+            lap_Btn.style.visibility='visible';
+            reset_btn.style.visibility='hidden'
+            start_btn.style.visibility='hidden'
+            stop_btn.style.visibility='visible'
         }
 
     })
@@ -86,6 +91,8 @@
         stop();
         if (start_btn.disabled == true) {
             start_btn.disabled = false;
+            reset_btn.style.visibility='visible'
+
         }
     });
     reset_btn.addEventListener('click', () => {
