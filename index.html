@@ -9,25 +9,22 @@
 </head>
 <body>
     <div class="container">
-        
-<img src="https://pngimg.com/uploads/stopwatch/stopwatch_PNG140.png" ><span><h1>Stopwatch &#9203</h1></span>
+ 
+<span><h1>Stopwatch <div class="logo">&#9203</div></h1></span>
         <div id="time">
-         00:00:00
+         00:00:00: <div class="nsec">00</div>
         </div>
         <br>
         <div id="buttons">
-            <button id='start'>Start &#9199</button>
-            <button id='stop'>Stop  &#9208</button>
-            <button id='reset'>Reset &#9940</button>
-            <button id='lap'>Lap &#9201</button>
-            <button id='lap_reset'>Lap Reset &#128260</button>
-
+            <button id='start'><b>Start</b> &#9199</button>
+            <button id='stop'><b>Stop </b> &#9208</button>
+            <button id='reset'><b>Reset</b> &#9940</button>
+            <button id='lap'><b>Lap</b> &#9201</button>
+            <button id='lap_reset'><b>Lap Reset</b> &#128260</button>
         </div>
-        <h1>Laps:</h1>
-
+        <h1 id='laps'>Laps:</h1>
         <div id="laps" >
                <ol type='a' id="lap_record">
-
                </ol>
         </div>
     </div>
