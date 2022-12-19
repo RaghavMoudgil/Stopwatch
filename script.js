@@ -1,7 +1,9 @@
 (function () {
+    var nsec = 0;
     var hr = 0;
     var min = 0;
     var sec = 0;
+    var displaynsec = 0;
     var displaysec = 0;
     var displaymin = 0;
     var displayhr = 0;
@@ -21,12 +23,17 @@
         hr = 0;
         min = 0;
         sec = 0;
+        nsec = 0;
         clearTimeout(reset_time)
-        document.getElementById('time').innerHTML = '00:00:00';
+        document.getElementById('time').innerHTML = '00:00:00:00';
     }
     function stopwatch() {
         if (rset == 'true') {
-            sec++;
+            nsec++;
+            if (nsec / 100 == 1) {
+                nsec = 00;
+                sec++;
+            }
             if (sec / 60 == 1) {
                 sec = 00;
                 min++;
@@ -35,6 +42,12 @@
                 min = 00;
                 sec = 00;
                 hr++;
+            }
+            if (nsec < 100) {
+                displaynsec = '' + nsec.toString();
+            }
+            else {
+                displaynsec = nsec;
             }
             if (sec < 10) {
                 displaysec = '0' + sec.toString();
@@ -54,10 +67,10 @@
             else {
                 displayhr = hr;
             }
-            document.getElementById('time').innerHTML = displayhr + ':' + displaymin + ':' + displaysec;
+            document.getElementById('time').innerHTML = displayhr + ':' + displaymin + ':' + displaysec +':'+displaynsec;
 
         }
-        reset_time = setTimeout(stopwatch, 1000);
+        reset_time = setTimeout(stopwatch, 10);
 
     }
     var lap_Btn = document.getElementById('lap')
@@ -73,18 +86,18 @@
 
         return count
     }
-    lap_Btn.style.visibility='hidden';
-    stop_btn.style.visibility='hidden';
-    laps.style.visibility='hidden';
+    lap_Btn.style.visibility = 'hidden';
+    stop_btn.style.visibility = 'hidden';
+    laps.style.visibility = 'hidden';
     start_btn.addEventListener('click', () => {
         start();
         counter();
         if (count >= 1) {
             start_btn.disabled = true;
-            lap_Btn.style.visibility='visible';
-            reset_btn.style.visibility='hidden'
-            start_btn.style.visibility='hidden'
-            stop_btn.style.visibility='visible'
+            lap_Btn.style.visibility = 'visible';
+            reset_btn.style.visibility = 'hidden'
+            start_btn.style.visibility = 'hidden'
+            stop_btn.style.visibility = 'visible'
         }
 
     })
@@ -93,7 +106,7 @@
         stop();
         if (start_btn.disabled == true) {
             start_btn.disabled = false;
-            reset_btn.style.visibility='visible'
+            reset_btn.style.visibility = 'visible'
 
         }
     });
@@ -108,7 +121,7 @@
         show_btn();
         if (start_btn.disabled == true) {
             start_btn.disabled = false;
-           
+
         }
     });
     lap_reset.addEventListener('click', () => {
@@ -120,7 +133,7 @@
 
     function lap() {
 
-        lapNow = `<div class="lap"><li>${displayhr} : ${displaymin} : ${displaysec}</li></div>`;
+        lapNow = `<div class="lap"><li>${displayhr} : ${displaymin} : ${displaysec} : ${displaynsec}</li></div>`;
 
         lap_Record.innerHTML += lapNow;
     }
@@ -129,7 +142,7 @@
     }
     function show_btn() {
         document.getElementById('lap_reset').style.display = 'inline';
-        laps.style.visibility='visible';
+        laps.style.visibility = 'visible';
     }
 
 
