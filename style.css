@@ -1,129 +1,156 @@
-body{
+body {
     background-color: bisque;
-   
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
     align-items: center;
-   
 }
-#time{
-    display: flex;
-   width: 100%;
 
-   align-items: center;
-   justify-content: center;
+#time {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     background-color: azure;
     position: relative;
- z-index: 1;
-font-family: 'Times New Roman', Times, serif ;
-font-size: 10rem;
-background-color: bisque;
+    z-index: 1;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10rem;
+    background-color: bisque;
 
 }
-#buttons{
+
+#buttons {
     display: flex;
-   width: 100%;
-
-
-   justify-content: center;
-
+    width: 100%;
+    justify-content: center;
     background-color: azure;
     position: relative;
     z-index: 1;
     box-sizing: 2rem;
     background-color: bisque;
-
-
-
 }
 
-#start{
+#start {
     background-color: green;
     margin: 1rem;
     padding: 1rem;
     font-size: larger;
     position: relative;
-z-index: 10;
-border-radius: 1rem;
-}
-#start:hover{
-    box-shadow: 2rem silver;
-
+    z-index: 10;
+    border-radius: 1rem;
 }
 
-#stop{
+#stop {
     background-color: red;
     margin: 1rem;
     padding: 1rem;
     font-size: larger;
     position: relative;
     border-radius: 1rem;
-z-index: 10;
+    margin-left: -7.7rem;
+    z-index: 10;
 }
 
-#stop :hover{
-    box-shadow: 2rem silver;
-}
-span{  
+span {
     font-family: 'Times New Roman', Times, serif;
     color: rgb(78, 56, 131);
     margin: 0;
     padding: 0;
 }
-img{
+
+img {
     margin: 0;
     padding: 0;
-height: 4rem;
-width: 4rem;
+    height: 4rem;
+    width: 4rem;
 }
-#reset{
+
+#reset {
     background-color: yellow;
     margin: 1rem;
     padding: 1rem;
     font-size: larger;
     border-radius: 1rem;
     position: relative;
-z-index: 10;
+    z-index: 10;
 }
-#reset:hover{
-    box-shadow: 2rem silver;
 
+#reset:hover {
+    box-shadow: 2rem silver;
 }
-#lap{
-     background-color: rgb(23, 207, 253);
+
+#lap {
+    background-color: rgb(23, 207, 253);
     margin: 1rem;
     padding: 1rem;
     font-size: larger;
     border-radius: 1rem;
-    position: relative;
-z-index: 10;
-    
+    margin-left: -8rem;
 }
-#laps{
+
+#laps {
     font-size: 2rem;
 }
-#lap_reset{
+
+#lap_reset {
     background-color: rgb(76, 255, 22);
     margin: 1rem;
     padding: 1rem;
     font-size: larger;
     position: relative;
-z-index: 10;border-radius: 1rem;
-display: none;
+    z-index: 10;
+    border-radius: 1rem;
+    display: none;
 }
-.btn :hover{
+
+.btn :hover {
     box-shadow: 2rem;
 }
-ol li{
+
+ol li {
     padding-left: 14px;
     margin-left: 0rem;
-     
+
 }
-ol{
 
-    border-style: solid;
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+.logo {
+    margin-left: 10.5rem;
+    position: absolute;
+    animation: myanim 10s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes myanim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#start,
+#stop,
+#lap,
+#reset,
+#lap,
+#lap_reset,
+#reset {
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
+}
+
+#time {
+    text-shadow: 5px 5px rgba(0, 0, 0, .8);
 }
