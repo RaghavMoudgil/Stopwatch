@@ -66,6 +66,7 @@
     var start_btn = document.getElementById('start');
     var stop_btn = document.getElementById('stop');
     var reset_btn = document.getElementById('reset');
+    var laps = document.getElementById('laps');
     var count = 0;
     function counter() {
         count++
@@ -73,7 +74,8 @@
         return count
     }
     lap_Btn.style.visibility='hidden';
-    stop_btn.style.visibility='hidden'
+    stop_btn.style.visibility='hidden';
+    laps.style.visibility='hidden';
     start_btn.addEventListener('click', () => {
         start();
         counter();
@@ -103,14 +105,10 @@
     });
     lap_Btn.addEventListener('click', () => {
         lap();
-        if (start_btn.disabled == true) {
-            start_btn.disabled = false;
-        }
-    });
-    lap_Btn.addEventListener('click', () => {
         show_btn();
         if (start_btn.disabled == true) {
             start_btn.disabled = false;
+           
         }
     });
     lap_reset.addEventListener('click', () => {
@@ -131,6 +129,7 @@
     }
     function show_btn() {
         document.getElementById('lap_reset').style.display = 'inline';
+        laps.style.visibility='visible';
     }
 
 
