@@ -107,6 +107,8 @@
         if (start_btn.disabled == true) {
             start_btn.disabled = false;
             reset_btn.style.visibility = 'visible'
+            start_btn.style.visibility = 'visible'
+            stop_btn.style.visibility = 'hidden'
 
         }
     });
